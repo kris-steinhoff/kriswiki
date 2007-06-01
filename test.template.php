@@ -1,5 +1,6 @@
 <?php
 
-echo 'user: '.$kw->user;
+$kw->error ( "help!" ); 
+echo 'author: '.$kw->author;
 
 ?>

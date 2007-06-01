@@ -23,14 +23,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
  
 */
-
-$kw_dir = '.';
-require( $kw_dir.'/kriswiki.class.php' );
-$kw = new kriswiki();
-print_r( $kw );
-$first = 'hel';
+$wiki_name = 'testing';
+$dir = dirname( realpath( $_SERVER[ 'SCRIPT_FILENAME' ] )) ;
+require( $dir.'/kriswiki.class.php' );
+$kw = new kriswiki( );
+$kw->wiki_name = $wiki_name;
+$kw->dir = $dir;
 $second = 'world';
 
-include( $kw_dir.'/test.template.php' );
-
+include ( $kw->dir.'/test.template.php' );
 ?>
